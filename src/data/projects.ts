@@ -45,7 +45,7 @@ export const projects: Project[] = [
     width: 1024,
     height: 1024,
     featured: true,
-    status: "Em Produção",
+    status: "Em produção",
     presentationUrl: "https://youtu.be/hKRJ8VVV-_g",
     description:
       "Sistema para gerenciamento e automação de torcidas dentro do Discord, desenvolvido para centralizar processos administrativos e melhorar a organização das comunidades.",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     width: 1024,
     height: 1024,
     featured: true,
-    status: "Em Desenvolvimento",
+    status: "Em desenvolvimento",
     description:
       "Sistema de gerenciamento desenvolvido como MVP para organização de clientes, projetos, tarefas e atividades.",
   },

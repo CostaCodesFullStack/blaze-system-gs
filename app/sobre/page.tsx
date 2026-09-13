@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
-import { SiteShell } from "@/components/site-shell"
+import type { Metadata } from "next";
+import { SiteShell } from "@/components/site-shell";
 
 export const metadata: Metadata = {
   title: "Sobre",
   description:
-    "A Blaze System é um studio voltado ao desenvolvimento de soluções digitais, produtos e experiências personalizadas.",
-}
+    "A Blaze System é um studio de desenvolvimento digital focado em transformar ideias em produtos, sistemas e experiências que fazem sentido na prática.",
+};
 
 export default function AboutPage() {
   return (
@@ -22,12 +22,14 @@ export default function AboutPage() {
         <div className="about-content">
           <div>
             <p className="lead">
-              A Blaze System é um studio voltado ao desenvolvimento de soluções digitais, produtos e
-              experiências personalizadas.
+              A Blaze System é um studio de desenvolvimento digital focado em
+              transformar ideias em produtos, sistemas e experiências que fazem
+              sentido na prática.
             </p>
             <p>
-              Nosso objetivo é transformar ideias em projetos funcionais, modernos e profissionais,
-              combinando tecnologia, design e atenção aos detalhes.
+              Trabalhamos com tecnologia, design e atenção aos detalhes para
+              criar soluções funcionais, bem executadas e preparadas para o
+              mundo real.
             </p>
           </div>
           <div className="quote">
@@ -35,13 +37,12 @@ export default function AboutPage() {
             <br />
             <strong>
               Profissionalismo não é diferencial.
-              <br />
-              É padrão.
+              <br />É padrão.
             </strong>
             ”
           </div>
         </div>
       </main>
     </SiteShell>
-  )
+  );
 }

@@ -30,7 +30,7 @@ export default function ContactPage() {
             <h2>Vamos conversar.</h2>
             <p>
               Entre no servidor oficial da Blaze System para conhecer nosso
-              trabalho, tirar dúvidas ou conversar sobre um novo projeto.
+              trabalho, tirar dúvidas ou conversar sobre seu próximo projeto.
             </p>
           </div>
 
@@ -47,10 +47,10 @@ export default function ContactPage() {
         <div className="contact-card">
           <div>
             <div className="eyebrow">EMAIL</div>
-            <h2>Vamos conversar.</h2>
+            <h2>Contato direto.</h2>
             <p>
-              Prefere enviar um e-mail? Entre em contato com a Blaze System pelo
-              endereço de e-mail abaixo.
+              Prefere enviar um e-mail? Fale diretamente com a Blaze System pelo
+              endereço abaixo.
             </p>
           </div>
           <a

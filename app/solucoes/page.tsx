@@ -1,12 +1,12 @@
-import type { Metadata } from "next"
-import { Bot, Cog, Layers, Monitor } from "lucide-react"
-import { SiteShell } from "@/components/site-shell"
+import type { Metadata } from "next";
+import { Bot, Cog, Layers, Monitor } from "lucide-react";
+import { SiteShell } from "@/components/site-shell";
 
 export const metadata: Metadata = {
   title: "Soluções",
   description:
     "Construímos experiências digitais com clareza, intenção e atenção aos detalhes — websites, sistemas, bots e automações.",
-}
+};
 
 const items = [
   {
@@ -17,7 +17,7 @@ const items = [
   {
     icon: Layers,
     title: "Sistemas",
-    text: "Aplicações personalizadas desenvolvidas de acordo com necessidades específicas.",
+    text: "Sistemas personalizados desenvolvidos para organizar processos, centralizar informações e resolver necessidades específicas.",
   },
   {
     icon: Bot,
@@ -29,7 +29,7 @@ const items = [
     title: "Automações",
     text: "Processos e integrações desenvolvidos para reduzir tarefas repetitivas e melhorar operações.",
   },
-]
+];
 
 export default function SolutionsPage() {
   return (
@@ -38,7 +38,11 @@ export default function SolutionsPage() {
         <div className="page-intro">
           <div className="eyebrow accent">CAPACIDADES</div>
           <h1>Soluções</h1>
-          <p>Construímos experiências digitais com clareza, intenção e atenção aos detalhes.</p>
+          <p>
+            Desenvolvemos produtos e soluções digitais para transformar
+            necessidades reais em experiências funcionais, eficientes e bem
+            executadas.
+          </p>
         </div>
         <div className="solution-list">
           {items.map(({ icon: Icon, title, text }, index) => (
@@ -58,5 +62,5 @@ export default function SolutionsPage() {
         </div>
       </main>
     </SiteShell>
-  )
+  );
 }
