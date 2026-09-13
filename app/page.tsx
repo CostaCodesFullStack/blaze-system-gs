@@ -1,47 +1,9 @@
-export default function Page() {
-  return (
-    <main
-      style={{
-        colorScheme: 'light dark',
-        position: 'relative',
-        display: 'flex',
-        minHeight: '100vh',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'light-dark(#fff, #000)',
-        color: 'light-dark(#000, #fff)',
-      }}
-    >
-      <svg
-        aria-hidden="true"
-        style={{ width: 80, height: 80 }}
-        width={80}
-        height={80}
-        fill="none"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        stroke="currentColor"
-        strokeWidth="0.5"
-      >
-        <path
-          d="M14.2 14.2H17V6.9375C17 4.76288 15.2371 3 13.0625 3H5.8V5.8M14.2 14.2V7.79063L7.79062 14.2H14.2ZM14.2 14.2V17H6.9375C4.76288 17 3 15.2371 3 13.0625V5.8H5.8M5.8 5.8V12.2313L12.2313 5.8H5.8Z"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <p
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 'calc(50% + 56px)',
-          transform: 'translateX(-50%)',
-          whiteSpace: 'nowrap',
-          fontSize: '14px',
-          fontWeight: 500,
-          color: 'light-dark(#71717a, #a1a1aa)',
-        }}
-      >
-        Your v0 generation will show here.
-      </p>
-    </main>
-  )
-}
+import Link from "next/link"
+import { ArrowUpRight, Bot, Cog, Layers, Monitor } from "lucide-react"
+import { ProjectCard } from "@/components/project-card"
+import { SiteShell } from "@/components/site-shell"
+import { featuredProjects } from "@/src/data/projects"
+
+const solutions = [{ icon: Monitor, title: "Websites", text: "Interfaces e experiências digitais modernas, responsivas e orientadas a objetivos." }, { icon: Layers, title: "Sistemas", text: "Aplicações personalizadas desenvolvidas de acordo com necessidades específicas." }, { icon: Bot, title: "Discord Bots", text: "Bots e sistemas para automação, gerenciamento e organização de comunidades Discord." }, { icon: Cog, title: "Automações", text: "Processos e integrações desenvolvidos para reduzir tarefas repetitivas e melhorar operações." }]
+
+export default function Page() { return <SiteShell><main><section className="hero container"><div className="hero-copy"><div className="eyebrow accent"><span className="dot" /> BLAZE SYSTEM™</div><h1>Profissionalismo não é diferencial.<br /><em>É padrão.</em></h1><p>Desenvolvemos websites, sistemas, bots e soluções digitais com foco em experiência, funcionalidade e qualidade.</p><div className="hero-actions"><Link className="button" href="/projetos">Ver projetos <ArrowUpRight /></Link><Link className="button button-ghost" href="/sobre">Conhecer a Blaze <span>→</span></Link></div></div><div className="hero-detail" aria-hidden="true"><span>01</span><div className="detail-line" /><span>04</span></div></section><section className="section container"><div className="section-heading"><div><div className="eyebrow">SELEÇÃO DE TRABALHOS</div><h2>Projetos em destaque</h2></div><p>Uma seleção de projetos desenvolvidos pela Blaze System.</p></div><div className="project-grid">{featuredProjects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div><Link href="/projetos" className="section-link">Ver todos os projetos <span>→</span></Link></section><section className="section section-border container"><div className="section-heading"><div><div className="eyebrow">COMO PODEMOS AJUDAR</div><h2>Soluções digitais<br />com propósito.</h2></div><p>Do conceito à entrega, criamos produtos digitais que resolvem problemas reais.</p></div><div className="solution-grid">{solutions.map(({ icon: Icon, title, text }) => <div className="solution-card" key={title}><Icon /><h3>{title}</h3><p>{text}</p><span className="card-index">0{solutions.findIndex((s) => s.title === title) + 1}</span></div>)}</div></section><section className="cta container"><div className="eyebrow accent">PRÓXIMO PROJETO</div><h2>Tem uma ideia?<br /><em>Vamos construir.</em></h2><Link href="/contato" className="button">Entrar em contato <ArrowUpRight /></Link></section></main></SiteShell> }
